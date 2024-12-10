@@ -31,16 +31,22 @@ package com.oops;
  class Sport extends Student{
 	 int sport_marks=34;
 	 
-	 public void show() {
-		System.out.println("roll no is :"+roll_no);
-		System.out.println("name is :"+name);
-		System.out.println("sport marks is :"+sport_marks);
-	}
+	 
  }
+ class Result extends Sport{
+	 String grade="A+";
+	 public void show() {
+			System.out.println("roll no is :"+roll_no);
+			System.out.println("name is :"+name);
+			System.out.println("sport marks is :"+sport_marks);
+			System.out.println("grade is :"+grade);
+		}
+ }
+ 
 public class InheritanceDemo {
 public static void main(String[] args) {
-	Sport sp=new Sport();
-	sp.setData();
-	sp.show();
+	Result rs=new Result();
+	rs.setData();
+	rs.show();
 }
 }
