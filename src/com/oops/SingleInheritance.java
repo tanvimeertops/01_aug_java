@@ -2,9 +2,17 @@ package com.oops;
 
 import java.util.Scanner;
 
+import com.basic.*;
+/*
+ * Encapsulation : wrapping of data
+ * private : only accessible with the class
+ * protected :only accessible with the child class
+ * default: only accessible within package
+ * public: accessible everywhere
+ */
 class Customer{
-	int cust_id;
-	String cust_name;
+	protected int cust_id;
+	 String cust_name;
 	
 	public void setCustData() {
 		cust_id=123;
@@ -47,5 +55,6 @@ public static void main(String[] args) {
 	amount=sc.nextDouble();
 	in.deposit(amount);
 	in.calcInterest();
+	CalcDemo c=new CalcDemo();
 }
 }

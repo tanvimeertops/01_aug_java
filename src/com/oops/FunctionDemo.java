@@ -25,6 +25,7 @@ class Calculator{
 	public void sum(int a,int b) {
 		System.out.println("sum is :"+(a+b));
 	}
+	
 	//3.Function without parameter and with return type
 	public int mul() {
 		return (num1*num2);
