@@ -6,7 +6,7 @@ package com.basic;
  */
 public class CalcDemo {
 public static void main(String[] args) {
-	int a=20,b=11;
+	int a=20,b=0;
 	
 	System.out.println("sum is :"+(a+b));//31
 	System.out.println("sub is :"+(a-b));//9

@@ -21,17 +21,17 @@ import java.util.Scanner;
  */
 public class ArrayDemo {
 public static void main(String[] args) {
-//	int[] a=new int[5]; //0 1 2 3 4
-//	
-//	Scanner sc=new Scanner(System.in);
-//	for (int i = 0; i < a.length; i++) {
-//		System.out.println("enter a value :");
-//		a[i]=sc.nextInt();
-//	}
-//	
-//	for (int i = 0; i < a.length; i++) {
-//		System.out.println(a[i]);
-//	}
+	int[] a=new int[5]; //0 1 2 3 4
+	
+	Scanner sc=new Scanner(System.in);
+	for (int i = 0; i <=a.length; i++) {
+		System.out.println("enter a value :");
+		a[i]=sc.nextInt();
+	}
+	
+	for (int i = 0; i < a.length; i++) {
+		System.out.println(a[i]);
+	}
 	
 	/*
 	 * 12
@@ -43,7 +43,7 @@ public static void main(String[] args) {
 	 * Selection sort
 	 */
 	
-	int[] num= {12,34,1,67,3};
+//	int[] num= {12,34,1,67,3};
 	//num[0]= 12// num[1]=34
 //	for (int i = 0; i < num.length; i++) {
 //		for (int j = i+1; j < num.length; j++) {
@@ -56,16 +56,16 @@ public static void main(String[] args) {
 //		
 //	}
 	
-	System.out.println("Sorted value");
-//	for (int i = 0; i < num.length; i++) {
-//		System.out.println(num[i]);
-//	}
-	
-	
-Arrays.sort(num);
-for (int i = 0; i < num.length; i++) {
-	System.out.println(num[i]);
-}
+//	System.out.println("Sorted value");
+////	for (int i = 0; i < num.length; i++) {
+////		System.out.println(num[i]);
+////	}
+//	
+//	
+//Arrays.sort(num);
+//for (int i = 0; i < num.length; i++) {
+//	System.out.println(num[i]);
+//}
 	
 }
 }
