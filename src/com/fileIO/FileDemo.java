@@ -5,8 +5,10 @@ package com.fileIO;
  * 
  */
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 class FDemo{
 	File f1;
@@ -19,10 +21,15 @@ class FDemo{
 			e.printStackTrace();
 		}
 		
-		display();
+		try {
+			display();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
-	public void display() {
+	public void display() throws IOException {
 		System.out.println("is file or not "+f1.isFile());
 		System.out.println("is directory or not "+f1.isDirectory());
 		System.out.println("can read or not "+f1.canRead());
@@ -31,6 +38,7 @@ class FDemo{
 		System.out.println("file name: "+f1.getName());
 		System.out.println("file path: "+f1.getPath());
 		System.out.println("absolute file path: "+f1.getAbsolutePath());
+		
 	}
 }
 public class FileDemo {
