@@ -1,5 +1,6 @@
 package com.collection;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -39,43 +40,57 @@ import java.util.Iterator;
  * Enumeration
  */
 public class ArrayListDemo {
-public static void main(String[] args) {
-	ArrayList a1=new ArrayList();
-	
-	
-	System.out.println("Default size is :"+a1.size());
-	System.out.println("Default value is :"+a1);
-	
-	a1.add(12);
-	a1.add(100.2626f);
-	a1.add('T');
-	a1.add(new Integer(200));
-	a1.add("tanvi");
-	a1.add("tanvi");
-	a1.add(null);
-	a1.add(null);
-	a1.add(null);
-	
-	System.out.println("Now size is :"+a1.size());
-	System.out.println("Now value is :"+a1);
-	
-	a1.remove(0);
-	System.out.println("Now size is :"+a1.size());
-	System.out.println("Now value is :"+a1);
-	
-	a1.remove(new Character('T'));
-	System.out.println("Now size is :"+a1.size());
-	System.out.println("Now value is :"+a1);
-	
-	a1.remove("tanvi");
-	System.out.println("Now size is :"+a1.size());
-	System.out.println("Now value is :"+a1);
-	
-	Iterator i1=a1.iterator();
-	
-	while (i1.hasNext()) {
-		System.out.println(i1.next());
+public static void main(String[] args) throws NoSuchFieldException, SecurityException, IllegalArgumentException, IllegalAccessException {
+	try {
+		ArrayList a1=new ArrayList(10);
 		
+		
+		System.out.println("Default size is :"+a1.size());
+		System.out.println("Default value is :"+a1);
+		
+		
+		a1.add(12);
+		a1.add(100.2626f);
+		a1.add('T');
+		a1.add(new Integer(200));
+		a1.add("tanvi");
+		a1.add("tanvi");
+		a1.add(null);
+		a1.add(null);
+		a1.add(null);
+		
+		System.out.println("Now size is :"+a1.size());
+		System.out.println("Now value is :"+a1);
+		
+		a1.remove(0);
+		System.out.println("Now size is :"+a1.size());
+		System.out.println("Now value is :"+a1);
+		
+		a1.remove(new Character('T'));
+		System.out.println("Now size is :"+a1.size());
+		System.out.println("Now value is :"+a1);
+		
+		a1.remove("tanvi");
+		System.out.println("Now size is :"+a1.size());
+		System.out.println("Now value is :"+a1);
+		
+		Iterator i1=a1.iterator();
+		
+		while (i1.hasNext()) {
+			System.out.println(i1.next());
+			
+		}
+		
+		Field field=ArrayList.class.getDeclaredField("elementData");
+		field.setAccessible(true);
+		Object[] elementData=(Object[])  field.get(a1);
+		
+		
+		System.out.println("capacity :"+elementData.length);
+	} catch (Exception e) {
+		// TODO: handle exception
 	}
+
+	
 }
 }
