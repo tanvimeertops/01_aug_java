@@ -49,7 +49,7 @@ public static void main(String[] args) {
 	}
 	
 	String str="rasr";
-	Palindrome p1=new Palindrome();
+	Palindrome p1=new Palindrome();	
 	System.out.println("the given string "+str+" is palindrome "
 			+ ":"+p1.isPalindrome(str));
 	
